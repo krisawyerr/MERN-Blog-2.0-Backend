@@ -39,12 +39,12 @@ app.post("/api/upload",upload.single("file"),(req,res)=>{
     res.status(200).json("Image has been uploaded successfully!")
 })
 
-let port = process.env.PORT;
+/* let port = process.env.PORT; */
 
 
-app.listen(port,()=>{
+app.listen(PORT,()=>{
     connectDB()
-    console.log("app is running on port "+port)
+    console.log("app is running on port "+PORT)
 })
 
 //middleware
@@ -58,7 +58,7 @@ app.use('/api/users', userRoute)
 app.use('/api/posts', postRoute)
 app.use('/api/comments', commentRoute)
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     connectDB()
-    console.log(`App is running on port ${port}`)
+    console.log(`App is running on port ${PORT}`)
 })
