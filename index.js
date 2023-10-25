@@ -39,7 +39,7 @@ app.post("/api/upload",upload.single("file"),(req,res)=>{
     res.status(200).json("Image has been uploaded successfully!")
 })
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 6589
 
 
 app.listen(port,()=>{
