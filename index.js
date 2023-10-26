@@ -50,7 +50,7 @@ dotenv.config()
 app.use(express.json())
 app.use(cookieParser())
 app.use("/images",express.static(path.join(__dirname,"/images")))
-app.use(cors({origin:"https://mern-blog-2-0.vercel.app/",credentials:true,methods: ['POST', 'GET', 'PUT', 'DEL']}))
+app.use(cors({ origin: "https://mern-blog-2-0.vercel.app", credentials: true, methods: ['POST', 'GET', 'PUT', 'DELETE'] }));
 app.use('/api/auth', authRoute)
 app.use('/api/users', userRoute)
 app.use('/api/posts', postRoute)
